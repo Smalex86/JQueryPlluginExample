@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>example page</title>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	
+	<div id="target">
+		<p>LeftClick to 3x copy or RightClick to delete me</p>
+	</div>
+	<a id="click" href="#">click to call method for 3x copy</a>
+
+	<script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script src="../lib/testPlugJQ.js"></script>
+	<script>
+		$('#target').testPlug();
+		$('#click').click( function(e) {
+			$('#target').testPlug('increase');
+		});
+	</script>
+
+</body>
+</html>
